@@ -1,0 +1,22 @@
+<!-- container-->
+<div class="container">
+  <h1 class="my-4 text-center text-lg-left">Scrabble Club LeaderBoard</h1>
+  <table>
+  <thead>
+    <tr>
+      <th>Player No.</th>
+      <th>Game Played</th>
+      <th>Average Score</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @players.each do |player| %>
+     <tr>
+      <td><%= player.first_name %></td>
+      <td><%= player.participants.count %></td>
+      <td><%= average_score(player) %></td>
+    </tr>
+  <%end%>
+  </tbody>
+</table>
